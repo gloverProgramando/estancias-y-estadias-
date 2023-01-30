@@ -472,7 +472,7 @@ class Estancia1Controller extends Controller
                 );
             }
             $NcolBD=['id_c_horaria','id_c_derecho','id_c_responsiva','id_c_presentacion',
-            'id_c_aceptacion','id_c_registro','id_d_proyecto','id_c_liberacion','id_c_compromiso','id_r_mensual'];
+            'id_c_aceptacion','id_c_registro','id_d_proyecto','id_c_liberacion','id_c_compromiso','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual','id_r_mensual'];
         
             //controlador de estatus
             $date = Carbon::now()->format('m');
@@ -537,7 +537,7 @@ class Estancia1Controller extends Controller
             return redirect('estancia1/'.$proces)->with('success','Documento agregado');
         }else
         {
-            return redirect('estancia1/'.$proces)->with('errorPDF','Hay un error en el nombre de tu pdf');
+            return redirect('estancia1/'.$proces)->with('errorPDF','Hay un error en el nombre de tu pdf 2');
         }
     }
 

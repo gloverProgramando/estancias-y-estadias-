@@ -266,7 +266,7 @@ class PdfController extends Controller
       }else{
         try {
           $path2=public_path('carta-de-liberacion.docx');
-          $template = new \PhpOffice\PhpWord\TemplateProcessor( documentTemplate: ''.$path2.'');
+          $template = new \PhpOffice\PhpWord\TemplateProcessor(''.$path2.'');
           $template->setValue('nombre_u',$uni->nombre_u);
           $template->setValue('cargo_u',$uni->cargo_u);
           $template->setValue('proceso',$name[$proces-1]);
