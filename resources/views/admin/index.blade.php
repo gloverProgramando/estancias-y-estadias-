@@ -1,6 +1,9 @@
 <!DOCTYPE html>
 <html lang="es">
 	@include('plantilla/admin/head')
+	<link rel="stylesheet" href='{{ asset('/css/main.css') }}'>
+	<script type="text/javascript" src="https://www.gstatic.com/charts/loader.js"></script>
+
 <body>
 	<!-- Content page-->
 	<section class="full-box dashboard-contentPage">
@@ -10,7 +13,7 @@
 		<!-- Content page -->
 		<div class="container p-3">
 			<div class="page-header">
-				<h2 class="text-titles">Usuarios <small>(Registrados)</small></h2>
+				<h2 class="text-titles py-3">Usuarios <small>(Registrados)</small></h2>
 			</div>
 		</div>
 		@include('notificaciones/notificaciones')
@@ -18,10 +21,10 @@
 				<div class="col-12 col-sm-12 col-md-6 col lg-6 px-5 py-2">
 					<div class="row listaAdmin">
 						<div class="col-12 tituloDash" style="background: rgb(255, 255, 255)">
-							<div style="color: rgb(0, 0, 0)">Administradores</div>		 
+							<div><b>Administradores</b> </div>		 
 						</div>
 						<div class="col-6" style="font-size: 30px; color:rgb(255, 255, 255);">
-							<a href="#!"><i class="zmdi zmdi-account  zmdi-hc-5x" style="color: rgb(255,103,32)"></i></a>
+							<a href="#!"><i class="zmdi zmdi-account  zmdi-hc-5x icon-card"></i></a>
 						</div>
 						<div class="col-6 registro">
 							<p class="registroCount">{{  $datos['adminsCount']  }}</p>
@@ -33,10 +36,10 @@
 				<div class="col-12 col-sm-12 col-md-6 col lg-6 px-5 py-2">
 					<div class="row listaAdmin">
 						<div class="col-12 tituloDash" style="background: rgb(255, 255, 255)">
-							<div style="color: rgb(0, 0, 0)">Usuarios</div>		 
+							<div><b>Usuarios</b> </div>		 
 						</div>
 						<div class="col-6" style="font-size: 30px; color:rgb(0, 0, 0);">
-							<a href="{{ route('usuarios.index') }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x" style="color: rgb(255,103,32)"></i></a>
+							<a href="{{ route('usuarios.index') }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x icon-card"></i></a>
 						</div>
 						<div class="col-6 registro">
 							<p class="registroCount">{{  $datos['usersCount'] }}</p>
@@ -48,10 +51,10 @@
 				<div class="col-12 col-sm-12 col-md-6 col lg-6 px-5 py-2">
 					<div class="row listaAdmin">
 						<div class="col-12 tituloDash" style="background: rgb(255, 255, 255)">
-							<div style="color: rgb(0, 0, 0)">Estancia I</div>		 
+							<div><b>Estancia I</b> </div>		 
 						</div>
 						<div class="col-6" style="font-size: 30px; color:rgb(0, 0, 0);">
-							<a href="{{ route('documentoEstancia1Admin.index',[1]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x" style="color: rgb(255,103,32)"></i></a>
+							<a href="{{ route('documentoEstancia1Admin.index',[1]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x icon-card"></i></a>
 						</div>
 						<div class="col-6 registro">
 							<p class="registroCount">{{ $estancia['estancia1']  }}</p>
@@ -63,10 +66,10 @@
 				<div class="col-12 col-sm-12 col-md-6 col lg-6 px-5 py-2">
 					<div class="row listaAdmin">
 						<div class="col-12 tituloDash" style="background: rgb(255, 255, 255)">
-							<div style="color: rgb(0, 0, 0)" >Estancia II</div>		 
+							<div ><b>Estancia II</b> </div>		 
 						</div>
 						<div class="col-6" style="font-size: 30px; color:rgb(0, 0, 0);">
-							<a href="{{ route('documentoEstancia1Admin.index',[2]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x" style="color: rgb(255,103,32)"></i></a>
+							<a href="{{ route('documentoEstancia1Admin.index',[2]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x icon-card"></i></a>
 						</div>
 						<div class="col-6 registro">
 							<p class="registroCount">{{ $estancia['estancia2']  }}</p>
@@ -78,10 +81,10 @@
 				<div class="col-12 col-sm-12 col-md-6 col lg-6 px-5 py-2">
 					<div class="row listaAdmin">
 						<div class="col-12 tituloDash" style="background: rgb(255, 255, 255)">
-							<div style="color: rgb(0, 0, 0)">Estadía</div>		 
+							<div><b>Estadía</b> </div>		 
 						</div>
 						<div class="col-6" style="font-size: 30px; color:rgb(0, 0, 0);">
-							<a href="{{ route('documentoEstancia1Admin.index',[3]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x" style="color: rgb(255,103,32)"></i></a>
+							<a href="{{ route('documentoEstancia1Admin.index',[3]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x icon-card"></i></a>
 						</div>
 						<div class="col-6 registro">
 							<p class="registroCount">{{ $estadia['estadia']  }}</p>
@@ -92,10 +95,10 @@
 				<div class="col-12 col-sm-12 col-md-6 col lg-6 px-5 py-2">
 					<div class="row listaAdmin">
 						<div class="col-12 tituloDash" style="background: rgb(255, 255, 255)">
-							<div style="color: rgb(0, 0, 0)">Estadía nacionales</div>		 
+							<div><b>Estadía nacionales</b> </div>		 
 						</div>
 						<div class="col-6" style="font-size: 30px; color:rgb(0, 0, 0);">
-							<a href="{{ route('documentoEstancia1Admin.index',[4]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x" style="color: rgb(255,103,32)"></i></a>
+							<a href="{{ route('documentoEstancia1Admin.index',[4]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x icon-card"></i></a>
 						</div>
 						<div class="col-6 registro">
 							<p class="registroCount">{{ $estadia['estadia_nacional']  }}</p>
@@ -107,10 +110,10 @@
 				<div class="col-12 col-sm-12 col-md-12 col lg-12 px-5 py-2">
 					<div class="row listaAdmin">
 						<div class="col-12 tituloDash" style="background: rgb(255, 255, 255)">
-							<div style="color: rgb(0, 0, 0)">Servicio social</div>		 
+							<div><b>Servicio social</b> </div>		 
 						</div>
 						<div class="col-6" style="font-size: 30px; color:rgb(0, 0, 0);">
-							<a href="{{ route('documentoEstancia1Admin.index',[5]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x" style="color: rgb(255,103,32)"></i></a>
+							<a href="{{ route('documentoEstancia1Admin.index',[5]) }}"><i class="zmdi zmdi-male-alt  zmdi-hc-5x icon-card"></i></a>
 						</div>
 						<div class="col-6 registro">
 							<p class="registroCount">{{ $servicio_social }}</p>
@@ -119,10 +122,9 @@
 					</div>
 					
 				</div>
-			</div>
-			
-			
+			</div>	
 	</section>
+
 	<!--====== Scripts -->
 	<script src="./js/jquery-3.1.1.min.js"></script>
 	<script src="./js/sweetalert2.min.js"></script>
@@ -131,8 +133,6 @@
 	<script src="./js/ripples.min.js"></script>
 	<script src="./js/jquery.mCustomScrollbar.concat.min.js"></script>
 	<script src="./js/main.js"></script>
-	<script>
-		$.material.init();
-	</script>
+	
 </body>
 </html>

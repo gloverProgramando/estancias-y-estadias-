@@ -106,24 +106,82 @@
 	align-items: center;
 	justify-content: center;
 }
+
+.fileinput-button{
+	border: 1px dashed #BBB
+}
+ ::-webkit-file-upload-button {
+	background: #dfe4ea;
+	color: #000;
+	border: 1px solid rgb(210, 210, 210);
+	/*border: 1px dashed #BBB*/
+  } 
+.zmdi-file{
+	color: #fd7e14;
+	font-size: 20px;
+}
+.table-head{
+    border: 1px solid rgb(210, 210, 210);
+    background:#dfe4ea
+}
+.table-head div{
+    color: #fd7e14;
+}
 .btnSubir{
-	font-size: 12px;
+	color: #fff;
+	font-size: 13px;
+	background-color: #fd7e14;
+	border:1px solid #fd7e14;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
+}
+.btnSubir:hover{
+	color: #fd7e14;
+	background-color: #fff;
+	border: 1px solid #fd7e14;
 }
 .btnDescargar{
-	font-size: 12px;
+	color: #fff;
+	font-size: 13px;
+	border-radius: 20px;
+	background-color: #fd7e14;
+	border:1px solid #fd7e14;
+	box-shadow: 0px 8px 15px rgba(0, 0, 0, 0.1);
 }
+
+.btnDescargar:hover{
+	color: #fd7e14;
+	background-color: #fff;
+	border: 1px solid #fd7e14;
+}
+
 .btnEliminar{
 	font-size: 11px;
 }
 .btnLlenar{
-	font-size: 11px;
+	font-size: 12px;
+	color: #fd7e14;
+	border: 1px solid;
+	background-color:transparent;
+}
+.btnLlenar:hover{
+	color: #fff;
+	border: 1px solid;
+	background-color:#fd7e14;
 }
 .btnCancelar{
 	font-size: 11px;
 }
 .btnLlenarDp{
-	font-size: 11px;
-	width: 160px;
+	font-size: 12px;
+	width: 200px;
+	color: #fd7e14;
+	border: 1px solid;
+	background-color:transparent;
+}
+.btnLlenarDp:hover{
+	color: #fff;
+	border: 1px solid;
+	background-color:#fd7e14;
 }
 .btnFormato{
 	font-size: 20px;
@@ -243,9 +301,15 @@
 	text-align: center;
 	align-items: center;
 	justify-content: center;
+	border-radius: 15px;
 	height: 195px;
 	background-color: rgb(255, 255, 255);
 	box-shadow: 0 1px 7px rgb(0 0 0 / 20%);}
+	.listaAdmin:hover{
+		transform: translateY(-5px);
+		box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
+	}
+	
 .tituloDash{
 	font-size: 28px;
 	height: 50px;

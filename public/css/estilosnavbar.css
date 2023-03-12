@@ -43,6 +43,7 @@ a{
    color: black;
 }
 
+
 .contenedor{
     
     height: 830px;
@@ -53,37 +54,57 @@ a{
 }
 .contenedor .carta{
     background-color: #fffffb81;
-   width: 330px;
-   height: 430px;
-   border-radius: 8px;
-   box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);
-   margin: 20px;
-   text-align: center;
-   transition: all 0.25s;
+    width: 330px;
+    height: 430px;
+    border-radius: 8px;
+    /*box-shadow: 0 2px 2px rgba(0, 0, 0, 0.2);*/
+    box-shadow: rgba(50, 50, 93, 0.25) 0px 2px 5px -1px, rgba(0, 0, 0, 0.3) 0px 1px 3px -1px;
+    margin: 20px;
+    margin-top: 10px;
+    text-align: center;
+    transition: all 0.25s;
+}
+.contenedor .carta h3{
+    margin-top: 13px;
+    margin-bottom: 18px;
 }
 .contenedor .carta:hover{
     transform: translateY(-15px);
     box-shadow: 0 12px 16px rgba(0, 0, 0, 0.2);
 }
 .contenedor .carta img{
-    width: 250px;
-    height: 220px;
+    display:block;
+    margin:auto;
+    /* width: 250px;
+    height: 220px; */
+    width: 200px;
+    height: 170px;
+    
+}
+.image-document-1{
+    filter: brightness(0) saturate(100%) invert(30%) sepia(78%) saturate(1895%) hue-rotate(212deg) brightness(91%) contrast(83%);
+}
+.image-document-2{
+    filter: invert(48%) sepia(13%) saturate(3207%) hue-rotate(130deg) brightness(95%) contrast(80%);
 }
 
+.image-document-3{
+filter: brightness(0) saturate(100%) invert(40%) sepia(59%) saturate(5119%) hue-rotate(344deg) brightness(100%) contrast(82%);
+}
 .contenedor .carta  a{
  font-weight: 500;
  text-decoration: none;
  border-radius: 8px;
  margin: 10px;
  margin-top: 15px;
- color: black;
+ color: #9f9c9c;
  font-size: 20px;
  transition: all 0.25s;  
  align-items: center; 
 }
 .contenedor .carta  a:hover{
     transform: translateY(-10px);
-    color:#ac4200 ;
+    color:#000 ;
    }
 .contenedor .carta .row{
     font-weight: 500;
@@ -109,6 +130,43 @@ a{
     margin-top: 25px;
    }
 
+   /* index inicio supervisor*/
+   .row{
+    padding: 0px 60px;
+   }
+   .registro small, p{
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    }
+    .registro small{
+        color: #9f9c9c;
+    }
+    .text-titles{
+        text-align: center;
+    }
+    .tituloDash div{
+        font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        margin-top: 10px;
+        color: rgb(0, 0, 0)
+    }
+    .icon-card{
+        color:rgb(255,103,32);
+        filter: drop-shadow(3px 5px 2px rgb(0 0 0 / 0.4));
+    }
+    .icon-card:hover{
+        color:#ff7f50;
+    }
+    .registroCount{
+        text-shadow: 1px 1px 2px rgb(0 0 0), 0 0 1em #ccc, 0 0 0.1em #ccc;
+    }
 
 
-
+    @media (min-width: 368px) and (max-width: 766px){
+        .row{
+            padding: 0px 0px;
+           }
+    }
+    @media (max-width: 406px){
+        .row{
+            padding: 0px 0px;
+           }
+    }

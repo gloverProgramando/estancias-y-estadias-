@@ -2,7 +2,7 @@
 <html lang="es">
 @include('plantilla/alumno/head')
 <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-<link rel="stylesheet" href='{{ asset('/css/main.css') }}'>
+<link rel="stylesheet" href='{{ asset('/css/estilosnavbar.css') }}'>
 
 <body>
 <!-- Content page-->
@@ -12,20 +12,19 @@
 <!-- Content page -->
 <div class="container p-3">
 <div class="page-header">
-<h2 class="text-titles">Formatos <small>({{ $proceso[1] }})</small></h2>
+<h2 class="text-titles text-center">Formatos <small>({{ $proceso[1] }})</small></h2>
 </div>
 </div>
 @include('notificaciones/notificaciones')
 <div class="container p-2">
 <ol class="list-group borde">
 <!--header de documentos-->
-<li class="list-group-item d-flex justify-content-between align-items-start"
-style="border: 1px solid rgb(210, 210, 210);">
-<div class="px-3 py-1">Nombre formato </div>
+<li class="list-group-item d-flex justify-content-between align-items-start table-head">
+<div class="px-3 py-1"><b>Nombre formato</b></div>
 <div class="col-12 col-sm-12 col-md-12 col-lg-7 p-1 colArchivo">
 <div class="row">
-<div class="col-12 col-sm-9 px-3 py-1">archivo</div>
-<div class="col-12 col-sm-3 px-3 py-1">estado</div>
+<div class="col-12 col-sm-9 px-3 py-1"><b>Archivo</b></div>
+<div class="col-12 col-sm-3 px-3 py-1"><b>Estado</b></div>
 </div>
 </div>
 </li>
@@ -514,7 +513,7 @@ style="border: 1px solid rgb(210, 210, 210);">
 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
 <div class="ms-2 me-auto">
 <div class="fw-bold"></div>
-1.- Carta de Presentación
+<p class="tr-text">1.- Carta de Presentación</p>
 </div>
 </div>
 
@@ -522,7 +521,7 @@ style="border: 1px solid rgb(210, 210, 210);">
 <div class="col-6 col-sm-12 col-md-3 col-lg-2 col-xl-2 p-1 colDescargar text-left">
 <a href="{{ route('descarga_cd_estancia_f01.index', [$proceso[0]]) }}">
 <button type="button" class="btn btn-outline-info btnDescargar"><i
-class="zmdi zmdi-download"> Descargar</i></button>
+class="zmdi zmdi-download"> </i> <b> Descargar</b> </button>
 </a>
 </div>
 <div class="col-6 col-sm-6 col-md-5 col-lg-3 col-xl-1 p-1 colLlenar ">
@@ -677,14 +676,14 @@ style="border: 1px solid rgb(210, 210, 210);">
 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
 <div class="ms-2 me-auto">
 <div class="fw-bold"></div>
-2.- Carta de Aceptación
+<p class="tr-text">2.- Carta de Aceptación</p>
 </div>
 </div>
 <!--Descargar 02-->
 <div class="col-6 col-sm-12 col-md-3 col-lg-2 col-xl-2 p-1 colDescargar text-left">
 <a href="{{ route('descarga_cd_estancia_f02.index', [$proceso[0]]) }}">
 <button type="button" class="btn btn-outline-info btnDescargar"><i
-class="zmdi zmdi-download"> Descargar</i></button>
+class="zmdi zmdi-download"> </i>  <b> Descargar</b> </button>
 </a>
 </div>
 <div class="col-6 col-sm-6 col-md-5 col-lg-3 col-xl-1 p-1 colLlenar ">
@@ -840,7 +839,7 @@ style="border: 1px solid rgb(210, 210, 210);">
 <div class="col-6 col-sm-6 col-md-6 col-lg-3 col-xl-2">
 <div class="ms-2 me-auto">
 <div class="fw-bold"></div>
-3.- Cédula de Registro
+<p class="tr-text">3.- Cédula de Registro</p>
 </div>
 </div>
 
@@ -872,7 +871,7 @@ href="{{ route('descarga_cd_estancia_f03.index', [$proceso[0]]) }}">
 <button type="button"
 class="btn btn-outline-info btnDescargar"><i
 class="zmdi zmdi-download">
-Descargar</i></button>
+</i>  <b> Descargar</b> </button>
 </a>
 </div>
 <div class="col-12 col-sm-7">
@@ -1097,8 +1096,8 @@ class="btn btn-outline-info btnSubir">Enviar</button>
 <!-- llenar cedula registro vacio-->
 <div class="col-6 col-sm-6 col-md-6 col-lg-2 col-xl-2 p-1 colLlenar">
 <a href="{{ route('home.index', [$proceso[0]]) }}">
-<button type="button" class="btn btn-outline-dark btnLlenar">Llenar Cedula de
-Registro</button>
+<button type="button" class="btn btn-outline-dark btnLlenar"><b>Llenar Cedula de Registro</b> 
+</button>
 </a>
 </div>
 
@@ -1123,7 +1122,7 @@ style="border: 1px solid rgb(210, 210, 210);">
 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
 <div class="ms-2 me-auto">
 <div class="fw-bold"></div>
-4.- Definición de Proyecto
+<p class="tr-text">4.- Definición de Proyecto</p>
 </div>
 </div>
 
@@ -1388,8 +1387,8 @@ class="btn btn-outline-info btnSubir">Enviar</button>
 <!--llenar formmulario f04-->
 <div class="col-6 col-sm-6 col-md-2 col-lg-2 col-xl-2 p-0 colLlenar">
 <a href="{{ route('f04Formulario.index', [$proceso[0], $proceso[1]]) }}">
-<button type="button" class="btn btn-outline-dark btnLlenarDp">Llenar
-Definición de Proyecto</button>
+<button type="button" class="btn btn-outline-dark btnLlenarDp"><b>Llenar Definición de Proyecto</b> 
+</button>
 </a>
 </div>
 <div class="col-12 col-sm-12 col-md-12 col-lg-8 colArchivo">
@@ -1411,14 +1410,14 @@ style="border: 1px solid rgb(210, 210, 210);">
 <div class="col-6 col-sm-6 col-md-4 col-lg-3 col-xl-2">
 <div class="ms-2 me-auto">
 <div class="fw-bold"></div>
-5.- Carta de Liberación
+<p class="tr-text">5.- Carta de Liberación</p>
 </div>
 </div>
 <!--Descargar f05-->
 <div class="col-6 col-sm-12 col-md-3 col-lg-2 col-xl-2 p-1 colDescargar text-left">
 <a href="{{ route('descarga_cd_estancia_f05.index', [$proceso[0]]) }}">
 <button type="button" class="btn btn-outline-info btnDescargar"><i
-class="zmdi zmdi-download"> Descargar</i></button>
+class="zmdi zmdi-download"> </i>  <b> Descargar</b> </button>
 </a>
 </div>
 <div class="col-6 col-sm-6 col-md-5 col-lg-3 col-xl-1 p-1 colLlenar ">
